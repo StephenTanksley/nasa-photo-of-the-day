@@ -3,7 +3,7 @@ import axios from "axios";
 import ImageCard from './components/image component/image'
 import TextComponent from './components/text component/text'
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const [data, setData] = useState({}); //stateful variable. Should contain the response.data object so we have access to ALL the keys inside it.
@@ -23,13 +23,11 @@ function App() {
     <div className="App">
       <div className = 'image-container'>
         <ImageCard 
-          className = 'image-component' 
           url = {data.url}
           />
       </div>
       <div className = 'text-container'>
         <TextComponent 
-          className = 'text-component'
           title = {data.title}
           explanation = {data.explanation} 
           />
