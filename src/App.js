@@ -33,7 +33,9 @@ function App() {
         <TextComponent 
           title = {data.title}
           explanation = {data.explanation}
+          copyright = {data.copyright}
           date = {data.date}
+
           />
       </div>
 
