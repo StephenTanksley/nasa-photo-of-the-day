@@ -2,6 +2,8 @@ import React, {useState, useEffect } from "react";
 import axios from "axios";
 import ImageCard from './components/image component/image'
 import TextComponent from './components/text component/text'
+import styled from 'styled-components'
+
 
 import "./App.scss";
 
@@ -19,27 +21,41 @@ function App() {
       });
   }, [])
   
+  const AppContainer = styled.div`
+  
+    width: 80%;
+    margin: 0 auto;
+
+  `;
+
+  const PageContainer = styled.div`
+    background-color: black;
+  `;
+
+
   return (
-    <div className="App">
-      
-      <div className = 'image-container'>
-        <ImageCard 
-          url = {data.url}
-          mediaType = {data.media_type}
-          />
-      </div>
+    <PageContainer>
+      <AppContainer>
+        
+        <div className = 'image-container'>
+          <ImageCard 
+            url = {data.url}
+            mediaType = {data.media_type}
+            />
+        </div>
 
-      <div className = 'text-container'>
-        <TextComponent 
-          title = {data.title}
-          explanation = {data.explanation}
-          copyright = {data.copyright}
-          date = {data.date}
+        <div className = 'text-container'>
+          <TextComponent 
+            title = {data.title}
+            explanation = {data.explanation}
+            copyright = {data.copyright}
+            date = {data.date}
 
-          />
-      </div>
+            />
+        </div>
 
-    </div>
+      </AppContainer>
+    </PageContainer>
   );
 }
 

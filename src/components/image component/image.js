@@ -1,4 +1,15 @@
 import React from "react";
+import styled from 'styled-components'
+
+const ImageDiv = styled.div`
+
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    
+`;
 
 function ImageCard(props) {
     const type = () => {
@@ -20,9 +31,9 @@ function ImageCard(props) {
 
     }
     return (
-        <div>
+        <ImageDiv>
             {type()}
-        </div>
+        </ImageDiv>
         );
 
     //ADDITIONAL FUNCTIONALITY I WANT TO GET WORKING - CONDITIONAL VIDEO SUPPORT //
