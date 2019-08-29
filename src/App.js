@@ -21,15 +21,19 @@ function App() {
   
   return (
     <div className="App">
+      
       <div className = 'image-container'>
         <ImageCard 
           url = {data.url}
+          mediaType = {data.media_type}
           />
       </div>
+
       <div className = 'text-container'>
         <TextComponent 
           title = {data.title}
-          explanation = {data.explanation} 
+          explanation = {data.explanation}
+          date = {data.date}
           />
       </div>
 
