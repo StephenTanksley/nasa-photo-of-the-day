@@ -51,19 +51,20 @@ function ImageCard(props) {
                 </div>
                 );
         } 
+        //Still need to import a video component.
         
-        if (props.mediaType === 'video') {
-            return (
-                <div className = 'video-player'>
-                    <img src={props.url}></img> 
-                </div>
-                );
-        } 
+        // if (props.mediaType === 'video') {
+        //     return (
+        //         <div className = 'video-player'>
+        //             <img src={props.url}></img> 
+        //         </div>
+        //         );
+        // } 
     }
 
     return (
         <ImageDiv>
-            {type()}
+           {/*Image Card lives here <----*/} */} {type()}
         </ImageDiv>
         );
 
