@@ -23,13 +23,14 @@ function App() {
   
   const AppContainer = styled.div`
   
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 
   `;
 
   const PageContainer = styled.div`
     background-color: black;
+    height: 70rem;
   `;
 
 

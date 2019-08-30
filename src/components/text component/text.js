@@ -6,18 +6,17 @@ const ContainerDiv = styled.div`
     font-size: 62.5%;
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 60%;
     justify-content: center;
+    text-align: center;
     align-items: center;
-    border: 1px solid green;
     margin: 0 auto;
     color: white;
-    line-height: 1.5rem;
-    font-size: 1.2rem;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    font-family: Trebuchet MS, Arial
 
 `;
-
-
 
 function TextComponent(props) {
     return (
