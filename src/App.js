@@ -25,6 +25,7 @@ function App() {
   
     width: 70%;
     margin: 0 auto;
+    padding-top: 2.5rem;
 
   `;
 
