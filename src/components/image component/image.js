@@ -1,45 +1,8 @@
 import React from "react";
-import styled from 'styled-components'
+import { ImageDiv } from '../../styles/styles'
+// import { Player } from 'video-react';
+// import styled from 'styled-components'
 
-const ImageDiv = styled.div`
-
-    display: flex;
-    width: 60rem;
-    height: 30rem;
-    border: .5rem solid black;
-    border-radius: 2.5rem;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    img {
-        animation: kenburns 30s infinite;
-    }
-
-    @keyframes kenburns {
-        0% {
-            opacity: 0;
-        }
-        5% {
-            opacity: 1;
-        }
-        80% {
-            transform: scale3d(1, 1, 1) translate3d(-6rem, -4rem, -2rem)
-            animation-timing-function: ease-in;
-            opacity: 1;
-        }
-        90% {
-            transform: scale3d(1.7, 1.7, 1.7) translate3d(2rem, 2rem, 1rem);
-            opacity: 1;
-        }
-        100% {
-            transform: scale3d(1, 1, 1) translate3d(0rem, 0rem, 0rem);
-            animation-timing-function: ease-out;
-            opacity: 0
-        }
-    }
-`;
 
 
 function ImageCard(props) {
@@ -47,7 +10,7 @@ function ImageCard(props) {
         if (props.mediaType === 'image'){
             return (
                 <div className = 'image-card'>
-                    <img src={props.url}></img> 
+                    <img src={props.url} alt={props.title}></img> 
                 </div>
                 );
         } 
@@ -55,9 +18,11 @@ function ImageCard(props) {
         
         // if (props.mediaType === 'video') {
         //     return (
-        //         <div className = 'video-player'>
-        //             <img src={props.url}></img> 
-        //         </div>
+        //         <Player
+        //             playsInline
+        //             poster="/assets/poster.png"
+        //             src={props.url}
+        //             />
         //         );
         // } 
     }

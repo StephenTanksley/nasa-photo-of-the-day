@@ -1,33 +1,578 @@
-.App {
-  text-align: center;
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+	line-height: 1;
 }
 
-.App-link {
-  color: #61dafb;
+ol,
+ul {
+	list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: 'Bangers', cursive;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+@media (max-width: 800px) {
+
+	.container {
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.container {
+		margin: 0 auto;
+	}
+}
+
+
+.header-bar {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media (max-width: 800px) {
+	.header-bar {
+		margin: 2em 4em;
+		display: flex;
+		flex-direction: column-reverse;
+		flex-flow: flex-end;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.header-bar {
+		display: flex;
+		flex-direction: column-reverse;
+		align-content: center;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 2em;
+	}
+}
+
+.nav {
+	width: 70%;
+	margin-left: 0;
+	padding: 1.2%;
+	word-spacing: 1.6em;
+	justify-items: space-between;
+}
+
+.nav a {
+	text-decoration: none;
+	color: grey;
+}
+
+@media (max-width: 800px) {
+
+	.nav {
+		width: 100%;
+		padding: 0.7em;
+		word-spacing: 2.5em;
+		font-size: 90%;
+		justify-items: space-between;
+		justify-content: space-between;
+		text-align: center;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.nav a {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 0 auto;
+		margin-top: 0;
+		padding: 0.7em;
+		word-spacing: 1.5em;
+		font-size: 90%;
+		text-align: center;
+		justify-items: space-between;
+		border-top: .1em solid grey;
+	}
+
+	.nav a:last-child {
+
+		border-bottom: .1em solid grey;
+	}
+}
+
+.logo {
+	display: flex;
+	height: 25px;
+	width: 0 auto;
+	margin: 20px;
+	vertical-align: center;
+
+}
+
+@media (max-width: 800px) {
+
+	.logo {
+		display: flex;
+		width: auto;
+		margin: .50em auto;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.logo {
+		display: flex;
+		width: auto;
+		margin: .50em auto;
+		margin-bottom: 1em;
+	}
+}
+
+
+.tagline {
+	margin: 0 auto;
+	font-size: auto;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+
+body {
+	width: auto;
+	margin: 1em;
+}
+
+.top-splash-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.tagline {
+	height: auto;
+	margin: 0 auto;
+	font-size: 55px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.button {
+	height: 20px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	align-content: center;
+	font-family: 'Trebuchet MS';
+	border: 0.12em solid black;
+}
+
+.left-side {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.snapshot {
+	display: inline-block;
+	height: auto;
+}
+
+@media (max-width: 800px) {
+
+	.snapshot {
+		display: none;
+		width: 100%;
+		margin: .5em;
+		margin-left: none;
+	}
+
+}
+
+
+.content-container {
+
+	border-top: .15em solid black;
+	border-bottom: .15em solid black;
+	border-left: none;
+	border-right: none;
+}
+
+@media (max-width: 800px) {
+	.content-container {
+
+		border-top: .15em solid black;
+		border-bottom: .15em solid black;
+		border-left: none;
+		border-right: none;
+	}
+}
+
+.top-content {
+
+	display: flex;
+	margin: 20px;
+	justify-items: space-between;
+	justify-content: space-between;
+	margin-left: 0px;
+}
+
+@media (max-width: 800px) {
+	.top-content {
+
+		display: flex;
+		flex-direction: row;
+		margin: .5em;
+		justify-items: space-between;
+		justify-content: space-between;
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 500px) {
+	.top-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-items: space-between;
+		justify-content: space-between;
+		margin-left: 0;
+		margin: 0 auto;
+	}
+}
+
+.same-line-top {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+
+	.same-line-top {
+		margin: .5em;
+		margin-left: 0px;
+		width: 47%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.same-line-top {
+		margin-top: 1.9em;
+		margin-left: 0em;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-size: .8em;
+	}
+}
+
+.bottom-content {
+	display: flex;
+	margin: 5%;
+	justify-items: space-between;
+	justify-content: space-between;
+	margin-left: 0px;
+}
+
+@media (max-width: 800px) {
+
+	.bottom-content {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		margin: 1%;
+		justify-items: space-between;
+		justify-content: space-between;
+		margin-left: 0px;
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 500px) {
+
+	.bottom-content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		margin: 1%;
+		justify-items: space-between;
+		justify-content: space-between;
+		margin-left: 0px;
+		font-size: .8em;
+	}
+}
+
+
+.same-line-bottom {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+	.same-line-bottom {
+		margin: .3em;
+		margin-left: 0px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 500px) {
+	.same-line-bottom {
+		margin: .3em;
+		margin-left: 0px;
+		margin-bottom: 3em;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.middle-img {
+	align-content: center;
+	width: 100%;
+	margin: 1em 0em;
+}
+
+@media (max-width: 800px) {
+	.middle-img {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.content-display {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-left: none;
+	border-right: none;
+	padding: 10px;
+}
+
+.contact {
+
+	width: 80%;
+	margin-top: 2%;
+	margin-left: 0;
+}
+
+@media (max-width: 800px) {
+	.contact {
+		width: 100%;
+		margin-top: 4%;
+		font-size: .9em;
+	}
+}
+
+@media (max-width: 500px) {
+	.contact {
+		width: 100%;
+		margin-top: 4%;
+		font-size: .8em;
+	}
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+
+@media (max-width: 800px) {
+	.footer {
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		margin: .4em;
+		font-size: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	.footer {
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+		justify-items: center;
+		margin: .4em;
+		margin-bottom: 1.5em;
+		font-size: 90%;
+	}
 }

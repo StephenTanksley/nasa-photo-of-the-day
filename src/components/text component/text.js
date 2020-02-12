@@ -6,7 +6,7 @@ const ContainerDiv = styled.div`
     font-size: 62.5%;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -15,7 +15,6 @@ const ContainerDiv = styled.div`
     line-height: 2rem;
     font-size: 1.1rem;
     font-family: Trebuchet MS, Arial
-
 `;
 
 function TextComponent(props) {
