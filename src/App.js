@@ -4,9 +4,6 @@ import ImageCard from './components/image component/image'
 import TextComponent from './components/text component/text'
 import { PageContainer, AppContainer } from './styles/styles'
 
-
-import "./App.scss";
-
 const App = () => {
   const [data, setData] = useState({});
   
