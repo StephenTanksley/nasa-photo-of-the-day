@@ -9,6 +9,7 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 const App = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false)
+  const API_KEY = process.env.API_KEY
   
   useEffect(() => {
     setLoading(true)
@@ -25,7 +26,6 @@ const App = () => {
         console.log(error)
       });
   }, [])
-
 
   return (
     <PageContainer>
