@@ -576,3 +576,13 @@ body {
 		font-size: 90%;
 	}
 }
+
+.loading-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: auto;
+	border: 2rem solid yellow;
+	color: white;
+ }

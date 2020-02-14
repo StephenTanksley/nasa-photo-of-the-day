@@ -1,11 +1,14 @@
 {
   "name": "nasa-apod",
+  "author": "Stephen Tanksley, stephen.tanksley@gmail.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.2",
     "axios": "^0.19.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-player": "^1.15.2",
     "react-scripts": "^3.3.1",
     "styled-components": "^5.0.1"
   },

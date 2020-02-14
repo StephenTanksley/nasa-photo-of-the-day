@@ -22,8 +22,32 @@ export const ContainerDiv = styled.div`
         max-width: 374px;
         width: 90%;
     }
-    
     `;
+
+export const LoadingContainer = styled.div`
+    
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    background-color: black;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    font-family: Trebuchet MS, Arial
+
+    /*media queries*/
+
+    @media ${devices.mobileS} {
+        max-width: 374px;
+        width: 90%;
+    }
+    `
 
 export const ImageDiv = styled.div`
 
