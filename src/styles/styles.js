@@ -94,18 +94,17 @@ export const ImageDiv = styled.div`
 `;
 
 export const AppContainer = styled.div`
-  
-width: 70%;
-margin: 0 auto;
-padding-top: 2.5rem;
+    
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 2.5rem;
 
     @media ${devices.mobileS} {
         width: 100%;
     }
-
 `;
 
 export const PageContainer = styled.div`
-background-color: black;
-height: auto;
+    background-color: black;
+    height: auto;
 `;

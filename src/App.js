@@ -12,19 +12,17 @@ const App = () => {
   const API_KEY = process.env.API_KEY
   
   useEffect(() => {
+    const fetchData = async () => {
     setLoading(true)
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=SOl08bQFOhqbyuBGL0TKGfOs2i1pbQZIgRWhpIDF')
-      .then(response =>  {
-        console.log(response.data);
-        setData(response.data)
-        // setLoading(false)
-        setTimeout(() => {
-          setLoading(false)
-        }, 3000)
-      })
-      .catch(function(error) {
-        console.log(error)
-      });
+    try {
+      const response = await axios.get('https://api.nasa.gov/planetary/apod?api_key=SOl08bQFOhqbyuBGL0TKGfOs2i1pbQZIgRWhpIDF')
+      setData(response)
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoading(false)
+    }
+    }
   }, [])
 
   return (
