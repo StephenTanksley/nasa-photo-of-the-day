@@ -9,20 +9,28 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 const App = () => {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false)
-  const API_KEY = process.env.API_KEY
+  // const API_KEY = process.env.API_KEY
   
   useEffect(() => {
-    const fetchData = async () => {
-    setLoading(true)
-    try {
-      const response = await axios.get('https://api.nasa.gov/planetary/apod?api_key=SOl08bQFOhqbyuBGL0TKGfOs2i1pbQZIgRWhpIDF')
-      setData(response)
-    } catch (error) {
-      console.log(error)
-    } finally {
-      setLoading(false)
+
+    let didCancel = false;
+    
+    const getData = async () => {
+      !didCancel && setLoading(true)
+      try {
+        const response = await axios.get('https://api.nasa.gov/planetary/apod?api_key=SOl08bQFOhqbyuBGL0TKGfOs2i1pbQZIgRWhpIDF')
+        console.log(response)  
+        !didCancel && setData(response.data)
+      }
+      catch (error) {
+        console.log(error)
+      }
+      finally {
+        !didCancel && setLoading(false)
+      }
     }
-    }
+    getData()
+    return () => { didCancel = true }
   }, [])
 
   return (
